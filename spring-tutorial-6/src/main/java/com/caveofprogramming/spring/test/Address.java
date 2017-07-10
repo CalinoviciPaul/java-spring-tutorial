@@ -20,4 +20,9 @@ public class Address {
                 ", postcode='" + postcode + '\'' +
                 '}';
     }
+
+
+    public void init(){
+        System.out.println("Bean created: " + this);
+    }
 }

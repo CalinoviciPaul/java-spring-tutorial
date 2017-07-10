@@ -40,4 +40,13 @@ public class Person {
 				", address=" + address +
 				'}';
 	}
+
+	public void onCreate(){
+		System.out.println("Person created " + this);
+	}
+
+
+	public void onDestroy(){
+		System.out.println("Person destroyed" + this);
+	}
 }

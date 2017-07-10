@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/java-spring-tutorial.iml" filepath="$PROJECT_DIR$/.idea/java-spring-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-spring-tutorial.iml" filepath="$PROJECT_DIR$/java-spring-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-tutorial-24/spring-tutorial-5 (1).iml" filepath="$PROJECT_DIR$/spring-tutorial-24/spring-tutorial-5 (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-tutorial-6/spring-tutorial-5 (2).iml" filepath="$PROJECT_DIR$/spring-tutorial-6/spring-tutorial-5 (2).iml" />
     </modules>
   </component>
 </project>

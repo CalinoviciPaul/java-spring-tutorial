@@ -9,7 +9,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		
+		/*
 		Person person = (Person)context.getBean("person");
 		person.speak();
 
@@ -20,7 +20,11 @@ public class App {
 
 		Address address = (Address) context.getBean("address");
 		System.out.println(person2);
-		System.out.println(address);
+		System.out.println(address);*/
+
+
+		FruitBasket basket = (FruitBasket) context.getBean("basket");
+		System.out.println(basket);
 		((ClassPathXmlApplicationContext)context).close();
 	}
 }

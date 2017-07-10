@@ -5,13 +5,19 @@ package com.caveofprogramming.spring.test;
  */
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 
 public class Logger {
 
-    @Autowired(required = false)
     private ConsoleWriter consoleWriter;
 
     @Autowired
+
+   // @Inject JSR-330
     private FileWriter fileWriter;
 
 
@@ -20,7 +26,13 @@ public class Logger {
 		this.consoleWriter = consoleWriter;
 		this.fileWriter = fileWriter;
 	}
-*/    //@Autowired
+*/
+
+    @Autowired(required = false)
+    @Qualifier(value = "squirrel")
+/*
+    @Resource(name = "squirrel") JSR 250
+*/
     public void setConsoleWriter(ConsoleWriter writer) {
         this.consoleWriter = writer;
     }
@@ -39,6 +51,17 @@ public class Logger {
         if (consoleWriter != null) {
             consoleWriter.write(text);
         }
+    }
+
+
+    @PostConstruct
+    public void init(){
+
+    }
+
+    @PreDestroy
+    public void detroy(){
+
     }
 
 }

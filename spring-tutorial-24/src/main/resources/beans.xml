@@ -15,9 +15,19 @@
 		class="com.caveofprogramming.spring.test.ConsoleWriter">
 	</bean>-->
 
+	<bean id="consoleWriter"
+		class="com.caveofprogramming.spring.test.ConsoleWriter">
+	</bean>
+
+	<bean id="squirrel"
+		class="com.caveofprogramming.spring.test.ConsoleWriter">
+	</bean>
+
 	<bean id="fileWriter"
 		class="com.caveofprogramming.spring.test.FileWriter">
 	</bean>
 
 	<context:annotation-config></context:annotation-config>
+
+	<context:component-scan base-package="com.caveofprogramming.spring.test"></context:component-scan>
 </beans>

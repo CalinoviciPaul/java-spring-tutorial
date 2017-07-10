@@ -11,9 +11,9 @@
 
 	</bean>
 
-	<bean id="consoleWriter"
+<!--	<bean id="consoleWriter"
 		class="com.caveofprogramming.spring.test.ConsoleWriter">
-	</bean>
+	</bean>-->
 
 	<bean id="fileWriter"
 		class="com.caveofprogramming.spring.test.FileWriter">

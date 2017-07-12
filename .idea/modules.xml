@@ -3,10 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java-spring-tutorial.iml" filepath="$PROJECT_DIR$/java-spring-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-tutorial-64/offers.iml" filepath="$PROJECT_DIR$/spring-tutorial-64/offers.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-tutorial-35/spring-tutorial-5.iml" filepath="$PROJECT_DIR$/spring-tutorial-35/spring-tutorial-5.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-tutorial-24/spring-tutorial-5 (1).iml" filepath="$PROJECT_DIR$/spring-tutorial-24/spring-tutorial-5 (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-tutorial-6/spring-tutorial-5 (2).iml" filepath="$PROJECT_DIR$/spring-tutorial-6/spring-tutorial-5 (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-tutorial-49/spring-tutorial-5 (3).iml" filepath="$PROJECT_DIR$/spring-tutorial-49/spring-tutorial-5 (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-tutorial-75/working-with-web-forms.iml" filepath="$PROJECT_DIR$/spring-tutorial-75/working-with-web-forms.iml" />
     </modules>
   </component>
 </project>

@@ -19,7 +19,6 @@
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.2.3.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.26" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.5.8" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.0.1.Final" />
@@ -28,6 +27,10 @@
           <element id="library" level="project" name="Maven: commons-validator:commons-validator:1.4.0" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.3" />
           <element id="library" level="project" name="Maven: commons-digester:commons-digester:1.8" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.3-1101-jdbc41" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="spring-security/web/Web" />

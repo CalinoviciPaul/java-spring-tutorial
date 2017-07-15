@@ -1,14 +1,64 @@
 <%@ page language="java" contentType="text/html; charset=US-ASCII"
     pageEncoding="US-ASCII"%>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 
 <link href="${pageContext.request.contextPath}/static/css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath}/static/script/jquery.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Create New Account</title>
+
+
+
+    <script type="text/javascript">
+        function onLoad() {
+
+            $("#password").keyup(checkPasswordsMatch);
+            $("#confirmpass").keyup(checkPasswordsMatch);
+
+            $("#details").submit(canSubmit);
+        }
+
+        function canSubmit() {
+            var password = $("#password").val();
+            var confirmpass = $("#confirmpass").val();
+
+            if(password != confirmpass) {
+                alert("<fmt:message key='UnmatchedPasswords.user.password' />")
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function checkPasswordsMatch() {
+            var password = $("#password").val();
+            var confirmpass = $("#confirmpass").val();
+
+            if (password.length > 3 || confirmpass.length > 3) {
+
+                if (password == confirmpass) {
+                    $("#matchpass").text("<fmt:message key='MatchedPasswords.user.password' />");
+                    $("#matchpass").addClass("valid");
+                    $("#matchpass").removeClass("error");
+                } else {
+                    $("#matchpass").text("<fmt:message key='UnmatchedPasswords.user.password' />");
+                    $("#matchpass").addClass("error");
+                    $("#matchpass").removeClass("valid");
+                }
+            }
+        }
+
+        $(document).ready(onLoad);
+    </script>
+
 </head>
 <body>
 

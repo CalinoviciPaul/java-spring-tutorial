@@ -40,14 +40,18 @@
 		<security:intercept-url pattern="/accountcreated" access="permitAll" />
 		<security:intercept-url pattern="/login" access="permitAll" />
 		<security:intercept-url pattern="/loggedout" access="permitAll" />
+		<security:intercept-url pattern="/denied" access="permitAll" />
 		<security:intercept-url pattern="/com" access="denyAll" />
 		<security:intercept-url pattern="/**" access="denyAll" />
 		<security:form-login login-page="/login" authentication-failure-url="/login?error=true"/>
 		<security:logout logout-success-url="/loggedout"/>
 
 
+		<security:access-denied-handler error-page="/denied"/>
+
+
 	</security:http>
-	<security:global-method-security secured-annotations="enabled" access-decision-manager-ref="methodDecisionManager"></security:global-method-security>
+	<security:global-method-security  secured-annotations="enabled" access-decision-manager-ref="methodDecisionManager"></security:global-method-security>
 
 
 	<bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter">

@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.caveofprogramming.spring.web.dao.User;
 import com.caveofprogramming.spring.web.dao.UsersDao;
 
+import java.util.List;
+
 @Service("usersService")
 public class UsersService {
 	
@@ -23,5 +25,9 @@ public class UsersService {
 
 	public boolean exists(String username) {
 		return usersDao.existsUsername(username);
+	}
+
+	public List<User> getAllUsers() {
+		return usersDao.getAllUsers();
 	}
 }

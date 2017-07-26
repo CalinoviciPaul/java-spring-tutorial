@@ -25,7 +25,8 @@
 	
 	<security:http use-expressions="true">
 
-		<security:intercept-url pattern="/admin" access="hasRole('admin')" />
+		<!--<security:intercept-url pattern="/admin" access="hasRole('admin')" />-->
+		<security:intercept-url pattern="/admin" access="permitAll" />
 		<security:intercept-url pattern="/createoffer" access="isAuthenticated()" />
 		<security:intercept-url pattern="/docreate" access="isAuthenticated()" />
 		<security:intercept-url pattern="/offercreated" access="isAuthenticated()" />
@@ -43,5 +44,27 @@
 		<security:intercept-url pattern="/**" access="denyAll" />
 		<security:form-login login-page="/login" authentication-failure-url="/login?error=true"/>
 		<security:logout logout-success-url="/loggedout"/>
+
+
 	</security:http>
+	<security:global-method-security secured-annotations="enabled" access-decision-manager-ref="methodDecisionManager"></security:global-method-security>
+
+
+	<bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter">
+		<property name="rolePrefix" value=""/>
+	</bean>
+
+	<bean id="authenticatedVoter" class="org.springframework.security.access.vote.AuthenticatedVoter">
+	</bean>
+
+	<bean id="webExpressionVoter" class="org.springframework.security.web.access.expression.WebExpressionVoter">
+	</bean>
+	<bean id="methodDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+		<constructor-arg name="decisionVoters">
+			<list>
+				<ref bean="roleVoter"/>
+			</list>
+		</constructor-arg>
+	</bean>
+
 </beans>
